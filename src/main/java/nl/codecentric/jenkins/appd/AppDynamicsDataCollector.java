@@ -23,14 +23,7 @@ import nl.codecentric.jenkins.appd.rest.types.MetricData;
 public class AppDynamicsDataCollector {
   private static final Logger LOG = Logger.getLogger(AppDynamicsDataCollector.class.getName());
   private static final String[] STATIC_METRIC_PATHS = {
-      "Overall Application Performance|Average Response Time (ms)",
-      "Overall Application Performance|Calls per Minute",
-      "Overall Application Performance|Normal Average Response Time (ms)",
-      "Overall Application Performance|Number of Slow Calls",
-      "Overall Application Performance|Number of Very Slow Calls",
-      "Overall Application Performance|Errors per Minute",
-      "Overall Application Performance|Exceptions per Minute",
-      "Overall Application Performance|Infrastructure Errors per Minute"};
+      "Overall Application Performance|Average Response Time (ms)"};
 
   private final RestConnection restConnection;
   private final AbstractBuild<?, ?> build;

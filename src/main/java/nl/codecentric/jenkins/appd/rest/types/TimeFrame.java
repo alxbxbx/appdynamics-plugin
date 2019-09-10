@@ -19,7 +19,7 @@ public class TimeFrame {
 @JsonProperty("windowSize")
 private Integer windowSize;
 @JsonProperty("to")
-private Integer to;
+private Long to;
 @JsonIgnore
 private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -34,12 +34,12 @@ this.windowSize = windowSize;
 }
 
 @JsonProperty("to")
-public Integer getTo() {
+public Long getTo() {
 return to;
 }
 
 @JsonProperty("to")
-public void setTo(Integer to) {
+public void setTo(Long to) {
 this.to = to;
 }
 

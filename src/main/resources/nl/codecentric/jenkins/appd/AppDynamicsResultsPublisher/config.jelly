@@ -6,12 +6,8 @@
     <f:textbox field="appdynamicsRestUri"/>
   </f:entry>
 
-  <f:entry title="${%appdynamics.rest.username.title}" description="${%appdynamics.rest.username.description}">
+  <f:entry title="API Token" description="Instana API token for used for integration with Instana API (can be found in Settings -> Access Control -> API Tokens">
     <f:textbox field="username" default="${descriptor.defaultUsername}"/>
-  </f:entry>
-
-  <f:entry title="${%appdynamics.rest.password.title}" description="${%appdynamics.rest.password.description}">
-    <f:password field="password"/>
   </f:entry>
 
   <f:entry title="${%appdynamics.application.name.title}" description="${%appdynamics.application.name.description}">
@@ -22,7 +18,7 @@
       title="${%appdynamics.connection.test.title}" progress="${%appdynamics.connection.test.progress}"
       method="testAppDynamicsConnection" with="appdynamicsRestUri,username,password,applicationName"/>
 
-  <f:section title="Advanced AppDynamics Integration Options">
+  <f:section title="Advanced Instana Integration Options">
     <f:advanced>
 
       <f:entry field="thresholdMetric" title="${%appdynamics.threshold.metric.title}"

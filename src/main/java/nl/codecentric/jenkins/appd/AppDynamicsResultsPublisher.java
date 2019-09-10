@@ -96,7 +96,7 @@ public class AppDynamicsResultsPublisher extends Recorder {
       if (RestConnection.validateRestUri(appdynamicsRestUri)) {
         validationResult = FormValidation.ok();
       } else {
-        validationResult = FormValidation.error("AppDynamics REST uri is not valid, cannot be empty and has to " +
+        validationResult = FormValidation.error("Uri is not valid, cannot be empty and has to " +
             "start with 'http://' or 'https://'");
       }
 
@@ -133,7 +133,7 @@ public class AppDynamicsResultsPublisher extends Recorder {
       if (RestConnection.validateApplicationName(applicationName)) {
         validationResult = FormValidation.ok();
       } else {
-        validationResult = FormValidation.error("AppDynamics application name cannot be empty");
+        validationResult = FormValidation.error("Instana application name cannot be empty");
       }
 
       return validationResult;
@@ -149,7 +149,7 @@ public class AppDynamicsResultsPublisher extends Recorder {
       if (connection.validateConnection()) {
         validationResult = FormValidation.ok("Connection successful");
       } else {
-        validationResult = FormValidation.warning("Connection with AppDynamics RESTful interface could not be established");
+        validationResult = FormValidation.warning("Connection with Instana RESTful interface could not be established");
       }
 
       return validationResult;
